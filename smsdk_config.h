@@ -40,9 +40,9 @@
 /* Basic information exposed publicly */
 #define SMEXT_CONF_NAME			"Sound File Info"
 #define SMEXT_CONF_DESCRIPTION	"Allows to get sound file informatio"
-#define SMEXT_CONF_VERSION		"1.0.0"
+#define SMEXT_CONF_VERSION		"1.0.1"
 #define SMEXT_CONF_AUTHOR		"Phoenix (˙·٠●Феникс●٠·˙)"
-#define SMEXT_CONF_URL			"https://github.com/komashchenko/SoundFileInfo"
+#define SMEXT_CONF_URL			"https://github.com/ExperimentFailed/SoundFileInfo"
 #define SMEXT_CONF_LOGTAG		"SFI"
 #define SMEXT_CONF_LICENSE		"GPL"
 #define SMEXT_CONF_DATESTRING	__DATE__

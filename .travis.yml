@@ -1,4 +1,5 @@
 language: cpp
+dist: trusty
 compiler:
   - clang
 
@@ -10,7 +11,7 @@ addons:
 
 env:
   global:
-    - SOURCEMOD_VERSION=1.9-dev
+    - SOURCEMOD_VERSION=1.10-dev 
 
 install:
   - git clone https://github.com/alliedmodders/sourcemod.git -b $SOURCEMOD_VERSION --depth 1 --recursive $TRAVIS_BUILD_DIR/../sourcemod
@@ -22,7 +23,7 @@ install:
 
 script:
   - mkdir $TRAVIS_BUILD_DIR/build && cd $TRAVIS_BUILD_DIR/build
-  - python ../configure.py --enable-optimize
+  - python ../configure.py --enable-optimize --symbol-files
   - ambuild
 
 before_deploy:
@@ -31,7 +32,8 @@ before_deploy:
 deploy:
   provider: releases
   api_key: ${GH_DEPLOYTOKEN}
-  file: SoundFileInfo-${TRAVIS_TAG}-linux.tar.gz
+  file_glob: true
+  file: "SoundFileInfo-${TRAVIS_TAG}-linux.tar.gz"
   skip_cleanup: true
   on:
-tags: true
+    tags: true

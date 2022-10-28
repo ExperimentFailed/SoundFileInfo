@@ -32,8 +32,6 @@ binary.compiler.includes += [
   os.path.join(builder.sourcePath, 'taglib', 'taglib', 'it'),
   os.path.join(builder.sourcePath, 'taglib', 'taglib', 's3m'),
   os.path.join(builder.sourcePath, 'taglib', 'taglib', 'xm'),
-  os.path.join(builder.sourcePath, 'taglib', 'taglib', 'dsf'),
-  os.path.join(builder.sourcePath, 'taglib', 'taglib', 'dsdiff'),
 ]
 
 binary.compiler.defines += ['TAGLIB_STATIC']
@@ -126,11 +124,6 @@ binary.sources += [
   'it/itproperties.cpp',
   'xm/xmfile.cpp',
   'xm/xmproperties.cpp',
-  'dsf/dsffile.cpp',
-  'dsf/dsfproperties.cpp',
-  'dsdiff/dsdifffile.cpp',
-  'dsdiff/dsdiffproperties.cpp',
-  'dsdiff/dsdiffdiintag.cpp',
   'toolkit/tstring.cpp',
   'toolkit/tstringlist.cpp',
   'toolkit/tbytevector.cpp',
